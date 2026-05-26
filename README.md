@@ -27,14 +27,14 @@ StudySwap is a web application that helps students share and find available stud
 ---
 
 ## 📂 Project Structure
-main.py
-auth.py
-database.py
-models.py
-static/
-templates/
-requirements.txt
-Procfile
+- main.py
+- auth.py
+- database.py
+- models.py
+- static/
+- templates/
+- requirements.txt
+- Procfile
 
 
 ---
