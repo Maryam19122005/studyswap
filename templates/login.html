@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySwap — Login</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-card">
+  <div class="auth-logo">📚 StudySwap</div>
+  <p class="auth-subtitle">Find & share study spots on campus</p>
+
+  <h2>Welcome back</h2>
+  <p class="auth-subtitle" style="margin-bottom: 24px;">Sign in to continue</p>
+
+  {% if error %}
+  <div class="error-banner">⚠️ {{ error }}</div>
+  {% endif %}
+
+  <form action="/login" method="post">
+    <div class="field">
+      <label>Username</label>
+      <input type="text" name="username" placeholder="your_username" required autocomplete="username">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In →</button>
+  </form>
+
+  <p class="auth-link">
+    No account yet? <a href="/signup">Create one — it's free</a>
+  </p>
+</div>
+
+</body>
+</html>

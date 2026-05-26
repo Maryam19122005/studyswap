@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySwap — Create Account</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-card">
+  <div class="auth-logo">📚 StudySwap</div>
+  <p class="auth-subtitle">Find & share study spots on campus</p>
+
+  <h2>Create account</h2>
+  <p class="auth-subtitle" style="margin-bottom: 24px;">Join the community</p>
+
+  {% if error %}
+  <div class="error-banner">⚠️ {{ error }}</div>
+  {% endif %}
+
+  <form action="/signup" method="post">
+    <div class="field">
+      <label>Username</label>
+      <input type="text" name="username" placeholder="choose_a_username" required autocomplete="username">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="create a strong password" required autocomplete="new-password">
+    </div>
+    <button type="submit" class="btn btn-primary">Create Account →</button>
+  </form>
+
+  <p class="auth-link">
+    Already have an account? <a href="/login">Sign in</a>
+  </p>
+</div>
+
+</body>
+</html>
